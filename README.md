@@ -1,25 +1,62 @@
 # Airline Management System
-Airline Management System (AMS) is an executable based program that has the functionality of managing and using the system as a passenger. It lets the managers of the airline management system add planes that belong to the airline, schedule flight and view passenger and flights that are on the system. As for passengers, they are able to sign up to the system as a passenger and search and filter flights. They're also able to purchase tickets that belong to a flight and view their profile information.
 
-## How to build
-Simply compile using java and run.
+A Java desktop application for managing airline operations and passenger bookings. The system provides separate interfaces for airline managers and passengers, covering flight administration, aircraft management, flight search, and ticket reservations.
 
-## How to use
-### Manager
-You may log in as a default manager account using the credentials "admin@ams.com" and password "admin". If you'd like to create more admin accounts, click CTRL+Alt+A on the registration panel and sign up accordingly.
-
-You may view the currently available flights on the view flights panel and use the departure, destination and time parameters to filter accordingly.
-
-You may create new planes using the manage planes panel or edit them.
-
-You may create new flights using the manage flights panel or edit them.
-
-You may view the current registered passengers and the tickets they have bought.
-
-You may use the profile tab to view account information and update it. You can also see the tickets the account has bought.
+## Features
 
 ### Passenger
-You may view the currently available flights on the view flights panel and use the departure, destination and time parameters to filter accordingly.
+- Register and log in to an account
+- Search and filter flights by departure, destination, and departure time
+- Purchase tickets in Economy or Business class
+- View purchased tickets and booking history
+- View and update profile information
 
-You may use the profile tab to view account information and update it. You can also see the tickets the account has bought.
+### Manager
+- Manage flights and aircraft
+- Create and edit flight schedules
+- View registered passengers
+- View passenger ticket bookings
+- Manage account information
+
+## Technologies
+
+- **Java** — application logic
+- **Java Swing** — graphical user interface
+- **SQLite** — persistent data storage
+- **JDBC** — database connectivity
+- **JUnit** — unit testing
+
+## Architecture
+
+The application follows a layered structure to separate responsibilities:
+
+- **Model:** Represents core entities such as users, flights, planes, and tickets.
+- **Repository:** Handles database operations and data persistence.
+- **Service:** Implements application logic and coordinates operations.
+- **View:** Provides the graphical user interface for passengers and managers.
+
+## Getting Started
+
+### Requirements
+- Java Development Kit (JDK)
+- SQLite JDBC driver
+
+### Running the Application
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/deniznal/Airline-Management-System.git
+   ```
+2. Open the project in an IDE such as IntelliJ IDEA.
+3. Ensure the SQLite JDBC driver is included in the project dependencies.
+4. Run `src/Main.java`.
+
+The application initializes its SQLite database (`ams.db`) and creates the required tables when a database connection is established.
+
+## Default Manager Account
+
+You can log in using the default manager credentials:
+
+- **Email:** `admin@ams.com`
+- **Password:** `admin`
 
